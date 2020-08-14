@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Design by <a href="http://nicolas.freezee.org" target="_BLANK">Nicolas Fafchamps</a>  -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>{{ .Site.Title }} </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Aditya Mahajan" />
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/styles.css" type="text/css" />
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/paperclear.css" type="text/css" />
+  {{  with .OutputFormats.Get "rss" -}}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end }}
+  <script type="module" defer
+    src="//instant.page/3.0.0"
+    integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1">
+  </script>
+
+  <script data-goatcounter="https://adityam.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <!-- ###################################################### -->
+  <!--                    Header                              -->
+  <!-- ###################################################### -->
+  <div id="container">
+    <div id="header" role="banner">
+      <span id="title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></span><br />
+      <!-- span id="sub-title">A Blog about ConTeXt</span -->
+    </div>
+    <!-- ###################################################### -->
+    <!--                    Menu                                -->
+    <!-- ###################################################### -->
+    <div id="menu" role="navigation">
+      <ul class="nav tree">
+        <li>
+        <strong>Recent Posts</strong>
+          <ul>
+            {{ range first 6 (where .Site.Pages.ByDate.Reverse "Section" "post") }}
+            <!-- The page showing all pages shows up here. Don't show it -->
+            {{if eq .LinkTitle "Posts"}}{{ else }}
+            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+            {{ end }}
+            {{ end }}
+          </ul>
+        </li>
+        <li><strong><a href="{{ .Site.BaseURL }}/post">All Posts</a></strong></li>
+      </ul>
+    </div>
+    <!-- ###################################################### -->
+    <!--                   Content                              -->
+    <!-- ###################################################### -->
+    <div id="content" role="main">

@@ -1,0 +1,46 @@
+{{ partial "header.html" .}}
+
+{{ range .Paginator.Pages }}     
+    <article class="post">
+
+        <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+        <p class="post-time">{{ .Date.Format "2 January, 2006" }}
+        ({{ .ReadingTime }} minute read).
+        Category: 
+        {{ with .Params.categories }} 
+        {{- range $index, $value := . -}}{{ if ne $index 0 }},{{ end }}
+        <a href="{{ "categories" | absURL }}/{{ $value | urlize | lower }}">
+          {{$value  | title}}</a>
+        {{- end -}}.
+        {{ end }} 
+        Tags:
+        {{ with .Params.tags }} 
+        {{- range $index, $value := . -}}{{ if ne $index 0 }},{{ end }}
+        <a href="{{ "tags" | absURL }}/{{ $value | urlize | lower }}">
+          {{- $value  | lower -}}
+        </a>
+        {{- end -}}.
+        {{ end }} 
+        </p>
+
+        <div class="post-content">
+            <p>{{ .Summary }}</p>
+            <a class="btn btn-default" href="{{.RelPermalink}}" id="read-more-button">
+                Read more >
+            </a>
+        </div>
+
+    </article>
+{{ end }}
+{{ if .Paginator.HasPrev }}
+    <a class="btn btn-default" href="{{ .Paginator.Prev.URL }}">
+        < Previous Page
+    </a>
+{{ end }}
+{{ if .Paginator.HasNext }}
+    <a class="btn btn-default" href="{{ .Paginator.Next.URL }}">
+        Next Page >
+    </a>
+{{ end }}
+
+{{ partial "footer.html" . }}
