@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Welcom to Jekyll!"
+tags: testAAA testBBB
+categories: Alegbra
 ---
 
 # Welcome
