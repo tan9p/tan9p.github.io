@@ -3,14 +3,14 @@ layout: null
 title: 主页
 ---
 
-# Hello World
+# Hello World in index.md
 
-{{ site.posts }}
+=={{ site.posts }}==
 
-{{ site.time }}
+__{{ site.time }}__
 
-{{ page.content }}
+**{{ page.content }}**
 
-{{ page.title }}
+*{{ page.title }}*
 
 # $$a^2+b^2=c^2$$
