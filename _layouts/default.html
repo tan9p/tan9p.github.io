@@ -1,4 +1,41 @@
-{{ partial "header.html" .}}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh">
+<head>
+  <title>{{ .Site.Title }} </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Tang Yibo" />
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/styles.css" type="text/css" />
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/paperclear.css" type="text/css" />
+  {{  with .OutputFormats.Get "rss" -}}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end }}
+</head>
+<body>
+  <div id="container">
+    <div id="header" role="banner">
+      <span id="title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></span><br />
+      <!-- span id="sub-title">A Blog about ConTeXt</span -->
+    </div>
+    <div id="menu" role="navigation">
+      <ul class="nav tree">
+        <li>
+        <strong>Recent Posts</strong>
+          <ul>
+            {{ range first 6 (where .Site.Pages.ByDate.Reverse "Section" "post") }}
+            <!-- The page showing all pages shows up here. Don't show it -->
+            {{if eq .LinkTitle "Posts"}}{{ else }}
+            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+            {{ end }}
+            {{ end }}
+          </ul>
+        </li>
+        <li><strong><a href="{{ .Site.BaseURL }}/post">All Posts</a></strong></li>
+      </ul>
+    </div>
+    <div id="content" role="main">
      
     <article class="post">
 
@@ -31,4 +68,10 @@
 
     </article>
 {{ end }}
-{{ partial "footer.html" . }}
+    </div>
+    <div id="footer" role="contentinfo">
+      Updated in Date
+    </div>
+  </div>
+</body>
+</html>
