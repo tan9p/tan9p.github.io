@@ -1,3 +1,8 @@
+---
+layout: null
+title: 主页
+---
+
 # Hello World
 
 {{ site.posts }}
