@@ -14,6 +14,10 @@
   {{ end }}
 </head>
 <body>
+    <nav>
+        <a href="./beike/">备课</a>
+        <a href="./shangti/">赏题</a>
+    </nav>
   <div id="container">
     <div id="header" role="banner">
       <span id="title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></span><br />
@@ -64,6 +68,7 @@
             <a class="btn btn-default" href="{{.RelPermalink}}" id="read-more-button">
                 Read more >
             </a>
+            <p>{{ content }}</p>
         </div>
 
     </article>
