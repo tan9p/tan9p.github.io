@@ -7,8 +7,6 @@ title: 主页
 
 __{{ site.time }}__
 
-{{ page.content }}
-
 *{{ page.title }}*
 
-# $$a^2+b^2=c^2$$
+$$a^2+b^2=c^2$$
