@@ -3,3 +3,5 @@ permalink: /:categories/:year/:month/:day/:title:output_ext
 plugins:
   - liquid
   - kramdown
+
+timezone: +800

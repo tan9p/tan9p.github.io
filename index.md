@@ -1,12 +1,10 @@
 ---
 layout: default
-title: 主页
+title: 杏坛郝酒
 ---
 
-#index.md
-
-__{{ site.time }}__
-
 *{{ page.title }}*
+
+Last updated: {{ site.time }}
 
 $$a^2+b^2=c^2$$
