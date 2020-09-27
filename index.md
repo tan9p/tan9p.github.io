@@ -7,7 +7,7 @@ title: 主页
 
 __{{ site.time }}__
 
-*{{ page.content }}*
+{{ page.content }}
 
 *{{ page.title }}*
 
