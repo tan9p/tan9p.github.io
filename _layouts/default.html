@@ -8,10 +8,6 @@
   <meta name="author" content="Tang Yibo" />
   <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
   <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/styles.css" type="text/css" />
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/paperclear.css" type="text/css" />
-  {{  with .OutputFormats.Get "rss" -}}
-      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-  {{ end }}
 </head>
 <body>
     <nav>

@@ -1,5 +1,7 @@
 permalink: /:categories/:year/:month/:day/:title:output_ext
 
+title: 杏坛郝酒
+
 plugins:
   - liquid
   - kramdown
