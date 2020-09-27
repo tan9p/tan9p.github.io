@@ -5,5 +5,3 @@ title: 杏坛郝酒
 plugins:
   - liquid
   - kramdown
-
-timezone: +8
