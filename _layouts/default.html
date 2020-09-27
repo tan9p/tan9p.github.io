@@ -2,7 +2,7 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh">
 <head>
-  <title>{{ .Site.Title }} </title>
+  <title>杏林郝酒</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Tang Yibo" />
@@ -16,62 +16,21 @@
     </nav>
   <div id="container">
     <div id="header" role="banner">
-      <span id="title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></span><br />
+      <span id="title"><a href="{{ .Site.BaseURL }}">杏林郝酒</a></span><br />
       <!-- span id="sub-title">A Blog about ConTeXt</span -->
-    </div>
-    <div id="menu" role="navigation">
-      <ul class="nav tree">
-        <li>
-        <strong>Recent Posts</strong>
-          <ul>
-            {{ range first 6 (where .Site.Pages.ByDate.Reverse "Section" "post") }}
-            <!-- The page showing all pages shows up here. Don't show it -->
-            {{if eq .LinkTitle "Posts"}}{{ else }}
-            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-            {{ end }}
-            {{ end }}
-          </ul>
-        </li>
-        <li><strong><a href="{{ .Site.BaseURL }}/post">All Posts</a></strong></li>
-      </ul>
     </div>
     <div id="content" role="main">
      
     <article class="post">
 
-        <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
-        <p class="post-time">{{ .Date.Format "2 January, 2006" }}
-        ({{ .ReadingTime }} minute read).
-        Category: 
-        {{ with .Params.categories }} 
-        {{- range $index, $value := . -}}{{ if ne $index 0 }},{{ end }}
-        <a href="{{ "categories" | absURL }}/{{ $value | urlize | lower }}">
-          {{$value  | title}}</a>
-        {{- end -}}.
-        {{ end }} 
-        Tags:
-        {{ with .Params.tags }} 
-        {{- range $index, $value := . -}}{{ if ne $index 0 }},{{ end }}
-        <a href="{{ "tags" | absURL }}/{{ $value | urlize | lower }}">
-          {{- $value  | lower -}}
-        </a>
-        {{- end -}}.
-        {{ end }} 
-        </p>
-
         <div class="post-content">
-            <p>{{ .Summary }}</p>
-            <a class="btn btn-default" href="{{.RelPermalink}}" id="read-more-button">
-                Read more >
-            </a>
             <p>{{ content }}</p>
         </div>
 
     </article>
-{{ end }}
     </div>
     <div id="footer" role="contentinfo">
-      Updated in Date
+      Last Updated in {{ site.time }}
     </div>
   </div>
 </body>
