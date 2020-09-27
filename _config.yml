@@ -6,4 +6,4 @@ plugins:
   - liquid
   - kramdown
 
-timezone: +800
+timezone: +8
