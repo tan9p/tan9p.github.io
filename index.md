@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 杏坛郝酒
+title: 自我介绍
 ---
 
 {{ page.title }}
