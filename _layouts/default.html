@@ -2,7 +2,7 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh">
 <head>
-	<title>{{ .Site.title }}</title>
+	<title>{{ site.title }}</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Tang Yibo" />
@@ -16,7 +16,7 @@
     </nav>
   <div id="container">
     <div id="header" role="banner">
-		<span id="title"><a href="{{ .Site.BaseURL }}">{{ .Site.title }}</a></span><BR/>
+		<span id="title"><a href="{{ .Site.BaseURL }}">{{ site.title }}</a></span><BR/>
       <span id="sub-title">郝酒的教学生活</span>
       <HR/>
     </div>
@@ -31,7 +31,7 @@
     </article>
     </div>
     <div id="footer" role="contentinfo">
-      Last Updated in {{ .Site.date }}
+      Last Updated in {{ site.date }}
     </div>
   </div>
 </body>
