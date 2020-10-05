@@ -17,15 +17,15 @@ a:hover {
   background-color: #ffffdd;
 }
 
-#teach {
+.teach {
   background-color:red;
 }
 
-#learn {
+.learn {
   background-color: yellow;
 }
 
-#live {
+.live {
   background-color: blue;
 }
 
