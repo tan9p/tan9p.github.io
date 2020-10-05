@@ -1,7 +1,7 @@
 permalink: /:categories/:year/:month/:day/:title:output_ext
 
 title: 杏林漫步
-timezone: China/Shanghai
+timezone: Asia/Shanghai
 plugins:
   - liquid
   - kramdown
