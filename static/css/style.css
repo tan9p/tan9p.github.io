@@ -17,6 +17,18 @@ a:hover {
   background-color: #ffffdd;
 }
 
+#teach {
+  background-color:red;
+}
+
+#learn {
+  background-color: yellow;
+}
+
+#live {
+  background-color: blue;
+}
+
 #container {
   background-color:#2A4776;
   border:1px solid #2A4776;
