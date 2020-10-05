@@ -31,9 +31,9 @@
     </article>
     </div>
     <div id="footer" role="contentinfo">
-      Last Updated in {{ site.time|add:28800 }}
+      Last Updated in {{ site.time| date: '%Y/%mm/%dd %H:%M:%S-%Z'}}
     </div>
-	<div><p>&copy; {{ 'now' | date: '%Y %M %D %H %m %s'}},Tang Yibo</p>
+	<div><p>&copy; {{ 'now' | date: '%Y'}},HaoJiu</p>
 		<p>{{ powered_by_link }}</P></div>
   </div>
 </body>
