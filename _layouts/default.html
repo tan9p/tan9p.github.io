@@ -2,7 +2,7 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh">
 <head>
-	<title>{{ site.title }}</title>
+	<title>{% if page.title %} {{ page.title }}{% else %} {{ site.title }}{% end if %}</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Tang Yibo" />
@@ -17,7 +17,7 @@
   <div id="container">
     <div id="header" role="banner">
 		<span id="title"><a href="{{ .Site.BaseURL }}">{{ site.title }}</a></span><BR/>
-      <span id="sub-title">郝酒的教学生活</span>
+		<span id="sub-title">郝酒的<span id="teach"><a href="./teach">教</a></span><span id="learn"><a href="./learn">学</a></span><span id="live"><a href="./live">生活</a></span></span>
       <HR/>
     </div>
     <div id="content" role="main">
@@ -31,7 +31,7 @@
     </article>
     </div>
     <div id="footer" role="contentinfo">
-      Last Updated in {{ site.time| date: '%Y/%mm/%dd %H:%M:%S-%Z'}}
+      Last Updated in {{ site.time| date: '%Y/%m/%d %H:%M:%S'}}
     </div>
 	<div><p>&copy; {{ 'now' | date: '%Y'}},HaoJiu</p>
 		<p>{{ powered_by_link }}</P></div>
