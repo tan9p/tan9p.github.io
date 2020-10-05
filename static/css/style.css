@@ -17,16 +17,16 @@ a:hover {
   background-color: #ffffdd;
 }
 
-.teach {
-  background-color:red;
+#teach {
+  color:red;
 }
 
-.learn {
-  background-color: yellow;
+#learn {
+  color: yellow;
 }
 
-.live {
-  background-color: blue;
+#live {
+  color: blue;
 }
 
 #container {
