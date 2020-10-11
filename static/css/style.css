@@ -44,6 +44,7 @@ a:hover {
 
 #header {
   color:#2A4776;
+  font-family: FangSong
   height:4em;
   padding-left: 4em;
   padding-top:1em;
@@ -73,6 +74,10 @@ a:hover {
   font-size:1.12em;
   line-height: 150%;
 }
+span#teach{background-color: pink;padding: 0px 10px 0px 10px}
+span#learn{background-color: orange;padding: 0px 10px 0px 10px}
+span#live{background-color: green;padding: 0px 10px 0px 10px}
+
 
 #menu {
   background-color:#426194;
