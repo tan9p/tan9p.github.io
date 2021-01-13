@@ -1,5 +1,4 @@
 # 集合
->> Updated at Date
 
 ## 集合的概念与表示
 
