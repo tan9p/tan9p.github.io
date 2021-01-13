@@ -1,3 +1,7 @@
+---
+title: 集合
+layout: post
+---
 # 集合
 
 1. bla
