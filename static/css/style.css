@@ -7,20 +7,20 @@ body {
   width:100%;
 }
 #teach a{
-  color:red;
+  color:white;
 }
 
 #learn a{
-  color: yellow;
+  color: white;
 }
 
 #live a{
-  color: blue;
+  color: white;
 }
 
-span#teach{background-color: pink;padding: 0px 10px 0px 10px}
+span#teach{background-color: darkred;padding: 0px 10px 0px 10px}
 span#learn{background-color: orange;padding: 0px 10px 0px 10px}
-span#live{background-color: green;padding: 0px 10px 0px 10px}
+span#live{background-color: darkblue;padding: 0px 10px 0px 10px}
 
 
 #content {
@@ -30,4 +30,9 @@ span#live{background-color: green;padding: 0px 10px 0px 10px}
 
 #title {
   font-size:24px;
+  font-family:KaiTi
+}
+#sub-title {
+  font-size:18px;
+  font-family:KaiTi
 }
