@@ -1,37 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh">
-<head>
-	<title>{% if page.title %}
-		{{ page.title }}
-		{% else %}
-		{{ site.title }}
-		{% endif %}
-		</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="author" content="Tang Yibo" />
-  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}/static/css/style.css" type="text/css" />
-</head>
-<body>
-    <div id="container">
-    <div id="header" role="banner">
-		<span id="title"><a href="{{ .Site.BaseURL }}">{{ site.title }}</a></span><BR/>
-		<span id="sub-title">郝酒的<span id="teach"><a href="./teach">教</a></span><span id="learn"><a href="./learn">学</a></span><span id="live"><a href="./live">生活</a></span></span>
-      <HR/>
-    </div>
-    <div id="content" role="main">
+{%- include header.html -%}
+<div id="content" role="main">
     <article class="post">
         <div class="post-content">
             <p>{{ content }}</p>
         </div>
     </article>
-    </div>
-    <div id="footer" role="contentinfo">
-      Last Updated in {{ site.time| date: '%Y/%m/%d %H:%M:%S %p'}}
-    </div>
-	<div><p>&copy; {{ 'now' | date: '%Y'}},HaoJiu</p>
-  </div>
+</div>
+{%- include footer.html -%}
 </body>
 </html>
