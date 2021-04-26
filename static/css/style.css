@@ -30,9 +30,11 @@ span#live{background-color: darkblue;padding: 0px 10px 0px 10px}
 
 #title {
   font-size:24px;
-  font-family:KaiTi
+  color:rgba(40,80,120,.9);
+  text-shadow:-1px -1px 1px #000,0 -1px 1px #000,1px -1px 1px #000,1px 0 1px #000,1px 1px 1px #000,0 1px 1px #000,-1px 1px 1px #000,-1px 0 1px #000,0 0 4px #000
+  font-family:serif
 }
 #sub-title {
   font-size:18px;
-  font-family:KaiTi
+  font-family:serif
 }
