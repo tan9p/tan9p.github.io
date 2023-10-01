@@ -10,8 +10,8 @@ categories: 初等数学
 
 令$f(x)=\frac{\ln x + 1}{x^3},g(x)=\frac{\mathrm{e}^x}{x}$.
 
-对$f(x)$，$f'(x)=\frac{-3\ln x-2}{x^4}$，所以$f_max(x)=f(\mathrm{e}^{-\frac{2}{3}})=\frac{\mathrm{e}^2}{3}$.
+对$f(x)$，$f'(x)=\frac{-3\ln x-2}{x^4}$，所以$f_{max}(x)=f(\mathrm{e}^{-\frac{2}{3}})=\frac{\mathrm{e}^2}{3}$.
 
-对$g(x)$，$g'(x)=\frac{\mathrm{e}^x(x-1)}{x^2}$，所以$g_min(x)=g(1)=\mathrm{e}$.
+对$g(x)$，$g'(x)=\frac{\mathrm{e}^x(x-1)}{x^2}$，所以$g_{min}(x)=g(1)=\mathrm{e}$.
 
-所以$\frac{\ln x + 1}{x^3}\leq\mathrm{e}<\frac{\mathrm{e}^2}{3}\leq\frac{\mathrm{e}^x}{x}$.
+所以$\frac{\ln x + 1}{x^3}\leq\frac{\mathrm{e}^2}{3}<\mathrm{e}\leq\frac{\mathrm{e}^x}{x}$.
