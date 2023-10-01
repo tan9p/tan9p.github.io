@@ -1,0 +1,13 @@
+permalink: /:categories/:year/:month/:day/:title:output_ext
+
+title: A Blog
+timezone: Asia/Shanghai
+paginate: 4
+plugins:
+  - liquid
+  - kramdown
+  - jekyll-paginate
+highlighter: rouge
+kramdowm:
+  math_engine: mathjax
+  syntax_highlighter: rouge

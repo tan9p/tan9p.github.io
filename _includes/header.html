@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh">
+<head>
+	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Tang Yibo" />
+  <script src="{{ .Site.BaseURL }}/static/script/tikzjax.js"></script>
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/static/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/static/css/fonts.css" type="text/css" />
+  <script data-goatcounter="https://tan9p.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</head>
+<body>
+    <div id="container">
+    <div id="header" role="banner">
+		<span id="title"><ul id="section">
+      <li><a href="{{site.url}}/index.html">{{ site.title }}</a></li>
+      <div id="right">
+      <li><a href="{{site.url}}/Ke">备课</a></li>
+      <li><a href="{{site.url}}/Ti">赏题</a></li>
+      <li><a href="{{site.url}}/Za">札记</a></li>
+    </div>
+    </ul></span>
+    </div>
+    <div id="menu" role="navigation">
+      <ul class="nav tree">
+        <li>
+          <strong>最近文章</strong>
+            <ul>
+              {% assign posts = site.posts | sort : 'date' | reverse %}
+              {% for post in posts limit:5 %}
+              <li><a href="{{post.url}}">{{post.title}}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+          <li><strong><a href="{{ site.url }}/index.html">所有文章</a></strong></li>
+     </ul>
+     </div>
+     <div id="content" role="main">
