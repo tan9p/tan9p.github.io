@@ -1,7 +1,12 @@
 <div>
-{% for section in site.data.sections.BX1.chapter %}
+{% for chapter in site.data.sections.BX1.chapters %}
     <li>
-        {{section}}
+        {{chapter.name}}
+        {% for section in chapter.sections %}
+        <li>
+        {{section.name}}
+        </li>
+        {% endfor %}
     </li>
 {% endfor %}
 </div>
