@@ -1,5 +1,5 @@
 <div>
-{% for chapter in site.data.sections.BX1.chapters %}
+{% for chapter in site.data.menus.BX1.chapters %}
     <li>
         {{chapter.name}}
         {% for section in chapter.sections %}
