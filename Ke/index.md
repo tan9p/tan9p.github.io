@@ -3,4 +3,5 @@
     <li>
         {{section}}
     </li>
+{% endfor %}
 </div>
