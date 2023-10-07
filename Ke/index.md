@@ -1,10 +1,10 @@
 <div>
 {% for chapter in site.data.menus.BX1.chapters %}
     <li>
-        {{chapter.name}}
-        {% for section in chapter.sections %}
+        {{ chapter }}
+        {% for section in chapter %}
         <li>
-        {{section.name}}
+        {{section}}
         </li>
         {% endfor %}
     </li>
