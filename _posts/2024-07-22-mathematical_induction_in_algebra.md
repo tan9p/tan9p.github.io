@@ -4,7 +4,6 @@ layout: post
 tags: 代数 数学归纳法
 categories: 数学竞赛
 ---
-
 时间：2024-7-22
 
 # 1
@@ -105,7 +104,28 @@ $[x]+\frac{[2x]}{2}+\cdots+\frac{[nx]}{n}\leq[nx]$.
 # 嵌入不等式
 $\triangle ABC$的三个内角分别为$A,B,C$，则对任意的实数$x,y,z$满足：$x^2+y^2+z^2-2yz\cos A-2zx\cos B-2xy\cos C\geq 0$.
 证明方法：
+1. 配方法：$LHS=x^2-2(z\cos B+y\cos C)x+(z\cos B+y\cos C)^2+y^2+z^2-(z\cos B+y\cos C)^2-2yz\cos A=(x-z\cos B-y\cos C)^2+z^2\sin^2 B+y^2\sin^2 C-2yz(\cos A+\cos B\cos C)=(x-z\cos B-y\cos C)^2+z^2\sin^2 B+y^2\sin^2 C-2yz\sin B\sin C=(x-z\cos B-y\cos C)^2+(y\sin C-z\sin B)^2\geq 0$.
+当且仅当$x:y:z=\sin A:\sin B:\sin C$时取等.
+2. [三元二次不等式的研究](:/3088d761364746e2a4288f0f18e67d39)
+
 求最值的题目.
+1. 在$\triangle ABC$中，角$A,B,C$是三角形的三个内角，$x,y,z>0$，求$x\cos A+y\cos B+z\cos C$的最大值.
+令$x=\frac{1}{r},y=\frac{1}{s},z=\frac{1}{t}$，嵌入不等式变为
+$\frac{1}{r}\cos A+\frac{1}{s}\cos B+\frac{1}{t}\cos C=
+\frac{st\cos A+rt\cos B+rs\cos C}{rst}\leq\frac{r^2+s^2+t^2}{2rst}=\frac{1}{2}(\frac{\frac{1}{s}\frac{1}{t}}{\frac{1}{r}}+\frac{\frac{1}{r}\frac{1}{t}}{\frac{1}{s}}+\frac{\frac{1}{r}\frac{1}{s}}{\frac{1}{t}})=\frac{1}{2}(\frac{yz}{x}+\frac{xz}{y}+\frac{xy}{z})$.
+
+2. 在$\triangle ABC$中，角$A,B,C$是三角形的三个内角，$x,y,z>0$，求$x\sin A+y\sin B+z\sin C$的最大值.
+
+3. 在锐角$\triangle ABC$中，角$A,B,C$是三角形的三个内角，$x,y,z>0$，求$x\tan A+y\tan B+z\tan C$的最小值.
+利用恒等式$\tan A+\tan B+\tan C=\tan A\tan B\tan C$
+等价形式$\cot B\cot C+\cot C\cot A+\cot A\cot B=1$.
+令$r = \cot A,s=\cot B,t=\cot C$，问题变成：$rs+st+tr=1$，求$\frac{x}{r}+\frac{y}{s}+\frac{z}{t}$的最小值.
+
+我的问题：$\sum\cot B\cot C=\sum\tan\frac{B}{2}\tan\frac{C}{2}=1$，两者有何联系？
+
+嵌入不等式推广到$n$元，和“等周不等式相关”.
+
+等周不等式：周长相等的$n$边形，正$n$边形的面积最大.
 
 
 # 离散傅里叶变换(Discrete Fourier Transform)
@@ -113,9 +133,38 @@ $\triangle ABC$的三个内角分别为$A,B,C$，则对任意的实数$x,y,z$满
 若$x_1,x_2,\cdots,x_n\in \mathbb{R}$，定义变换：$y_j=\frac{1}{\sqrt{n}}\sum\limits_{k=1}^n x_k\omega^{-kj}$.
 该变换有以下性质：
 1. $x_j=\frac{1}{\sqrt{n}}\sum\limits_{k=1}^n y_k\omega^{kj}$
-2. $\sum\limits_{k=1}^n x_kx_{k+t}=\sum\limits_{k=1}^n(y_k)^2\cos\frac{2k\pi t}{n}$，$t=0,1,2,\cdots,n$，下标$(k+t)$取除$n$的余数.
+2. $\sum\limits_{k=1}^n x_kx_{k+t}=\sum\limits_{k=1}^n|y_k|^2\cos\frac{2k\pi t}{n}$，$t=0,1,2,\cdots,n$，下标$(k+t)$取除$n$的余数.
+3. 
+证明：
+	1. $\frac{1}{\sqrt{n}}\sum\limits_{k=1}^n y_k\omega^{kj}=\frac{1}{\sqrt{n}}\sum\limits_{k=1}^n (\frac{1}{\sqrt{n}}\sum\limits_{i=1}^n x_i\omega^{-ki})\omega^{kj}=\frac{1}{n}\sum\limits_{k=1}^n\sum\limits_{i=1}^n x_i\omega^{k(j-i)}=\frac{1}{n}\sum\limits_{i=1}^n x_i\sum\limits_{k=1}^n\omega^{k(j-i)}=\frac{1}{n}\sum\limits_{i=1}^n x_i n \delta_{ij}=x_j$；
+	2. 
+
 
 # 樊畿不等式(Ky-fan inequality)
 离散情形：
 设$x_1,x_2,\cdots,x_n$且$x_1+x_2+\cdots+x_n=0$，则有$(\sum\limits_{i=1}^n x_i^2)\cos\frac{2\pi}{n}\geq x_1x_2+x_2x_3+\cdots+x_{n-1}x_n+x_nx_1$.
 当且仅当：$x_k=a\cos\frac{2k\pi}{n}+b\sin\frac{2k\pi}{n}$时取等.
+
+证明：
+由$x_1+x_2+\cdots+x_n=0$，得$y_n=0$.
+对离散傅里叶变换的性质2，取$t=1$，得：
+$\sum\limits_{k=1}^n x_k x_{k+1}=\sum\limits_{k=1}^n|y_k|^2\cos\frac{2k\pi}{n}=|y_n|^2+\sum\limits_{k=1}^{n-1}|y_k|^2\cos\frac{2k\pi}{n}\leq\sum\limits_{k=1}^{n}|y_k|^2\cos\frac{2\pi}{n}=\cos\frac{2\pi}{n}\sum\limits_{k=1}^n |x_k|^2=\cos\frac{2\pi}{n}\sum\limits_{k=1}^n x_k^2$.
+
+例题：$n\geq 2$，设$x_1,x_2,\cdots,x_n\in\mathbb{R}$，求证：$\frac{x_1x_2+x_2x_3+\cdots+x_{n-1}x_n}{x_1^2+x_2^2+\cdots+x_n^2}\leq\cos\frac{\pi}{n+1}$.
+
+$n=2$时，$\frac{x_1x_2}{x_1^2+x_2^2}\leq\frac{1}{2}=\cos\frac{\pi}{3}$，显然成立.
+$n=3$时，$\frac{x_1x_2+x_2x_3}{x_1^2+x_2^2+x_3^2}\leq\cos\frac{\pi}{4}$，可通过待定系数完成.
+$2x_1x_2\leq\lambda x_1^2+\frac{1}{\lambda}x_2^2$
+$2x_2x_3\leq\mu x_2^2+\frac{1}{\mu}x_3^2$
+要求$\lambda =\frac{1}{\lambda}+\mu=\frac{1}{\mu}$，解得$\lambda=\sqrt{2},\mu=\frac{\sqrt{2}}{2}$.
+得：$2(x_1x_2+x_2x_3)\leq\sqrt{2}(x_1^2+x_2^2+x_3^2)$.得证.
+一般的情况的常规做法：
+待定系数法，$\lambda_1=\frac{1}{\lambda_1}+\lambda_2=\frac{1}{\lambda_2}+\lambda_3=\cdots=\frac{1}{\lambda_{n-2}}+\lambda_{n-1}=\frac{1}{\lambda_{n-1}}$.
+解得：$\lambda_1=\frac{1}{\lambda_{n-1}},\lambda_2=\frac{1}{\lambda_{n-2}},\cdots$
+可以对$n$分奇偶求解，但是$\lambda_1$的显式解和$\cos\frac{\pi}{n+1}$的关系，还需费一番功夫.
+
+用[樊畿不等式](#樊畿不等式)可以快速的解决：
+凑和是0，并且没有$x_nx_1$这一项.
+对$x_1,x_2,\cdots,x_{n-1},x_n,0,-x_1,-x_2,\cdots,-x_{n-1},-x_n,0$这$2n+2$个数，由樊畿不等式：
+$(2\sum x_i^2)\cos\frac{2\pi}{2n+2}\geq 2(x_1x_2+x_2x_3+\cdots+x_{n-1}x_n)$.
+取等条件是$x_k=a\cos\frac{2k\pi}{n}+b\sin\frac{2k\pi}{n},-x_k=a\cos\frac{2(k+n)\pi}{n}+b\sin\frac{2(k+n)\pi}{n}$，相容.
