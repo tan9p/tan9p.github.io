@@ -1,9 +1,9 @@
 <div>
 {% for post in site.posts %}
     <div>     
-    <a id=”postname“ href="{{ post.url }}">{{ post.title }}</a>
+    <a id="postname" href="{{ post.url }}">{{ post.title }}</a>
     <div id="postdate">{{ post.date | date:"(%Y年%m月%d日)" }}</div>
-    <div class="post-excerpt">{{post.content | truncate:130}}</p></div>
+    <div class="post-excerpt">{{post.content | truncate:100}}</p></div>
     </div>
 {% endfor %}
 {% if paginator.total_pages > 1 %}
