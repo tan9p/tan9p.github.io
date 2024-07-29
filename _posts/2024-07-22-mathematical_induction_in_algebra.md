@@ -133,7 +133,7 @@ $\frac{1}{r}\cos A+\frac{1}{s}\cos B+\frac{1}{t}\cos C=
 若$x_1,x_2,\cdots,x_n\in \mathbb{R}$，定义变换：$y_j=\frac{1}{\sqrt{n}}\sum\limits_{k=1}^n x_k\omega^{-kj}$.
 该变换有以下性质：
 1. $x_j=\frac{1}{\sqrt{n}}\sum\limits_{k=1}^n y_k\omega^{kj}$
-2. $\sum\limits_{k=1}^n x_kx_{k+t}=\sum\limits_{k=1}^n|y_k|^2\cos\frac{2k\pi t}{n}$，$t=0,1,2,\cdots,n$，下标$(k+t)$取除$n$的余数.
+2. $\sum\limits_{k=1}^n x_kx_{k+t}=\sum\limits_{k=1}^n\abs{y_k}^2\cos\frac{2k\pi t}{n}$，$t=0,1,2,\cdots,n$，下标$(k+t)$取除$n$的余数.
 3. 
 证明：
 	1. $\frac{1}{\sqrt{n}}\sum\limits_{k=1}^n y_k\omega^{kj}=\frac{1}{\sqrt{n}}\sum\limits_{k=1}^n (\frac{1}{\sqrt{n}}\sum\limits_{i=1}^n x_i\omega^{-ki})\omega^{kj}=\frac{1}{n}\sum\limits_{k=1}^n\sum\limits_{i=1}^n x_i\omega^{k(j-i)}=\frac{1}{n}\sum\limits_{i=1}^n x_i\sum\limits_{k=1}^n\omega^{k(j-i)}=\frac{1}{n}\sum\limits_{i=1}^n x_i n \delta_{ij}=x_j$；
