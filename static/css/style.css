@@ -140,7 +140,6 @@ a:hover {
   list-style-type:disc;
 }
 
-
 #menu li {
   border-left:2px solid #426194; 
   color:#F8F8F8;
@@ -152,7 +151,6 @@ a:hover {
   padding:0.125em;;
   padding-left:0.5em;
 }
-
 
 #menu li a {
   color:#F8F8F8;
@@ -287,4 +285,8 @@ tr:nth-child(6n+4), tr:nth-child(6n+5), tr:nth-child(6n) {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+#sec_nav {
+	float: left;
 }

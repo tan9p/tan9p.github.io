@@ -1,4 +1,4 @@
-<div>
+<div id="sec_nav">
 {% for chapter in site.data.menus.BX1 %}
     <li>
         {{ chapter.name }}
