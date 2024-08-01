@@ -4,7 +4,7 @@
         {{ chapter.name }}
         {% for section in chapter.sections %}
         <li>
-        {{section}}
+        <a href="Ke/{{section}}.md">{{section}}</a>
         </li>
         {% endfor %}
     </li>
