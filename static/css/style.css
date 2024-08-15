@@ -26,7 +26,7 @@ a:hover {
   background-color:#2A4776;
   border:1px solid #2A4776;
   max-width: 100%;
-  flex:4;
+  flex: 0 0 auto;
 }
 
 @media all and (min-device-width: 400px) {
@@ -299,5 +299,6 @@ tr:nth-child(6n+4), tr:nth-child(6n+5), tr:nth-child(6n) {
 
 #sec_nav {
 	list-style: none;
-  flex:1;
+  flex: 0 0 auto;
+  width:210px;
 }
