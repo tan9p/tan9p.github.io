@@ -9,6 +9,7 @@ body {
 
 #main {
   display:flex;
+  align-items: flex-start;
 }
 
 a {
@@ -25,7 +26,7 @@ a:hover {
   background-color:#2A4776;
   border:1px solid #2A4776;
   max-width: 100%;
-  flex:1;
+  flex:4;
 }
 
 @media all and (min-device-width: 400px) {
