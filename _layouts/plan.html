@@ -1,5 +1,5 @@
 {% include header.html %}
-<div id="sec_nav">
+<div class="sec_nav" id="BX1">
     {% for chapter in site.data.menus.BX1 %}
         <li>
             {{ chapter.name }}
@@ -11,6 +11,59 @@
         </li>
     {% endfor %}
 </div>
+
+<div class="sec_nav" id="BX2">
+    {% for chapter in site.data.menus.BX2 %}
+        <li>
+            {{ chapter.name }}
+            {% for section in chapter.sections %}
+            <li>
+            <a href="{{section}}.html">{{section}}</a>
+            </li>
+            {% endfor %}
+        </li>
+    {% endfor %}
+</div>
+
+<div class="sec_nav" id="XBX1">
+    {% for chapter in site.data.menus.XBX1 %}
+        <li>
+            {{ chapter.name }}
+            {% for section in chapter.sections %}
+            <li>
+            <a href="{{section}}.html">{{section}}</a>
+            </li>
+            {% endfor %}
+        </li>
+    {% endfor %}
+</div>
+
+<div class="sec_nav" id="XBX2">
+    {% for chapter in site.data.menus.XBX2 %}
+        <li>
+            {{ chapter.name }}
+            {% for section in chapter.sections %}
+            <li>
+            <a href="{{section}}.html">{{section}}</a>
+            </li>
+            {% endfor %}
+        </li>
+    {% endfor %}
+</div>
+
+<div class="sec_nav" id="XBX3">
+    {% for chapter in site.data.menus.XBX3 %}
+        <li>
+            {{ chapter.name }}
+            {% for section in chapter.sections %}
+            <li>
+            <a href="{{section}}.html">{{section}}</a>
+            </li>
+            {% endfor %}
+        </li>
+    {% endfor %}
+</div>
+
 <div id="container">
     <div id="header" role="banner">
 		<span id="title"><ul id="section">
