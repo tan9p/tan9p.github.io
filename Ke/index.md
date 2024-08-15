@@ -3,7 +3,7 @@ layout: plan
 ---
 
 
-<div id="sec">
+
 # 集合的概念
 
 ## 教材分析
