@@ -1,9 +1,25 @@
 {% include header.html %}
+<div id="menu" role="navigation">
+    <ul class="nav tree">
+      <li>
+        <strong>最近文章</strong>
+          <ul>
+            {% assign posts = site.posts | sort : 'date' | reverse %}
+            {% for post in posts limit:5 %}
+            <li><a href="{{post.url}}">{{post.title}}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        <li><strong><a href="{{ site.url }}/index.html">所有文章</a></strong></li>
+   </ul>
+</div>
+<div id="content" role="main">
 <div id="name">
 {{page.title}}
 </div>
 <div id="content">
     {{ content }}
+</div>
 </div>
 {% include footer.html %}
 </body>
