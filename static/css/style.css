@@ -7,6 +7,10 @@ body {
   width:100%;
 }
 
+#main {
+  display:flex;
+}
+
 a {
   color:#2A4776;
   text-decoration:underline;
@@ -21,6 +25,7 @@ a:hover {
   background-color:#2A4776;
   border:1px solid #2A4776;
   max-width: 100%;
+  flex:1;
 }
 
 @media all and (min-device-width: 400px) {
@@ -292,8 +297,6 @@ tr:nth-child(6n+4), tr:nth-child(6n+5), tr:nth-child(6n) {
 }
 
 #sec_nav {
-	position: absolute;
-	left: 10px;
-	top: 90px;
 	list-style: none;
+  flex:1;
 }
