@@ -1,5 +1,8 @@
 {% include header.html %}
-<div class="sec_nav" id="BX1">
+<div id="sec_nav">
+    <li>必修一</li><li>必修二</li><li>选修一</li><li>选修二</li><li>选修三</li>
+</div>
+<div id="BX1">
     {% for chapter in site.data.menus.BX1 %}
         <li>
             {{ chapter.name }}
@@ -12,7 +15,7 @@
     {% endfor %}
 </div>
 
-<div class="sec_nav" id="BX2">
+<div id="BX2">
     {% for chapter in site.data.menus.BX2 %}
         <li>
             {{ chapter.name }}
@@ -25,7 +28,7 @@
     {% endfor %}
 </div>
 
-<div class="sec_nav" id="XBX1">
+<div id="XBX1">
     {% for chapter in site.data.menus.XBX1 %}
         <li>
             {{ chapter.name }}
@@ -38,7 +41,7 @@
     {% endfor %}
 </div>
 
-<div class="sec_nav" id="XBX2">
+<div id="XBX2">
     {% for chapter in site.data.menus.XBX2 %}
         <li>
             {{ chapter.name }}
@@ -51,7 +54,7 @@
     {% endfor %}
 </div>
 
-<div class="sec_nav" id="XBX3">
+<div id="XBX3">
     {% for chapter in site.data.menus.XBX3 %}
         <li>
             {{ chapter.name }}
