@@ -4,6 +4,13 @@ html, body {
     padding: 0;
 }
 
+.main{
+	display:flex;
+	align-items: flex-start;   /* 两栏顶部对齐 */
+    	min-height: 100vh;
+    	gap: 0;
+}
+
 /* ---------- 左右两栏布局 ---------- */
 body {
     display: flex;          /* 让两个顶级 div 并排 */
