@@ -576,3 +576,26 @@ body {
     #sec h3 { font-size: 17px; }
     #sec h4 { font-size: 16px; }
 }
+
+
+#name {
+    display: inline-block;
+    font-size: 26px;          /* 文章标题字号，可按需调 */
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.5px;
+    color: #2f7de1;           /* 蓝色 */
+    text-decoration: none;
+    transition: color .2s ease, opacity .2s ease;
+}
+
+/* 悬停/聚焦时加深，保持可读性 */
+#name:hover,
+#name:focus-visible {
+    color: #1a5fc0;
+    outline: none;
+}
+
+/* 已访问保持同色，避免变紫 */
+#name:visited {
+    color: #2f7de1;
