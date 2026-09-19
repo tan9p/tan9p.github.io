@@ -1,5 +1,6 @@
 /* ---------- 基础重置 ---------- */
 html, body {
+    display: block;
     margin: 0;
     padding: 0;
 }
@@ -150,7 +151,7 @@ body {
 }
 
 /* ================= 小屏降级 ================= */
-@media (max-width: 640px) {
+/*@media (max-width: 640px) {
     #header {
         padding: 14px 16px;
     }
@@ -166,6 +167,7 @@ body {
         font-size: 13px;
     }
 }
+*/
 
 .book-select {
         position: relative;
@@ -325,8 +327,7 @@ body {
         }
         .book-option { opacity: 1; }
     }
-    
-    #container,
+#container,
 #header,
 #menu,
 #content {
