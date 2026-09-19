@@ -342,3 +342,127 @@ body {
     padding: 0;
     list-style: none;
 }
+
+#postname {
+    display: inline-block;
+    font-size: 26px;          /* 文章标题字号，可按需调 */
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.5px;
+    color: #2f7de1;           /* 蓝色 */
+    text-decoration: none;
+    transition: color .2s ease, opacity .2s ease;
+}
+
+/* 悬停/聚焦时加深，保持可读性 */
+#postname:hover,
+#postname:focus-visible {
+    color: #1a5fc0;
+    outline: none;
+}
+
+/* 已访问保持同色，避免变紫 */
+#postname:visited {
+    color: #2f7de1;
+}
+#postdate {
+    display: block;
+    margin-top: 6px;          /* 和标题拉开一点距离 */
+    font-size: 13px;          /* 比正文小，不抢视线 */
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+    color: #8a97a6;           /* 中性灰蓝，弱化处理 */
+    font-variant-numeric: tabular-nums;  /* 数字等宽，日期对齐更整齐 */
+}
+
+.post-excerpt {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.75;
+    color: #4a5866;          /* 和正文一致的灰，比 postdate 深一点、比标题浅 */
+}
+
+/* ---------- 关键：把摘要里的标题全部降级 ---------- */
+/* 让它们不超过 postname（26px），并且小、轻、不抢眼 */
+.post-excerpt h1,
+.post-excerpt h2,
+.post-excerpt h3,
+.post-excerpt h4,
+.post-excerpt h5,
+.post-excerpt h6 {
+    margin: 0 0 4px;         /* 去掉默认大边距，避免摘要被撑高 */
+    font-size: 15px;         /* 统一压到和正文一样大 */
+    font-weight: 600;        /* 只靠加粗区分，不靠字号 */
+    line-height: 1.6;
+    color: #1d2b3a;          /* 用深色，但比 postname 的蓝色低调 */
+    display: inline;         /* 让标题和后面的正文连在一起，像一句引导 */
+}
+
+/* 标题后补一个分隔符，视觉上更像"标题：正文" */
+.post-excerpt h1::after,
+.post-excerpt h2::after,
+.post-excerpt h3::after,
+.post-excerpt h4::after,
+.post-excerpt h5::after,
+.post-excerpt h6::after {
+    content: "：";
+    margin-right: 2px;
+    font-weight: 400;
+    color: #8a97a6;
+}
+
+/* ---------- 其他 markdown 元素也别喧宾夺主 ---------- */
+.post-excerpt p {
+    margin: 0 0 6px;
+}
+
+.post-excerpt a {
+    color: #2f7de1;
+    text-decoration: none;
+}
+.post-excerpt a:hover {
+    text-decoration: underline;
+}
+
+.post-excerpt img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 6px 0;
+}
+
+/* 引用、代码块在摘要里缩小处理 */
+.post-excerpt blockquote {
+    margin: 6px 0;
+    padding: 4px 10px;
+    border-left: 3px solid #e6e9ef;
+    color: #6b7887;
+    font-size: 14px;
+}
+
+.post-excerpt pre,
+.post-excerpt code {
+    font-size: 13px;
+    background: #f6f8fb;
+    border-radius: 4px;
+}
+.post-excerpt pre {
+    padding: 8px 10px;
+    overflow-x: auto;
+}
+
+/* 列表收紧 */
+.post-excerpt ul,
+.post-excerpt ol {
+    margin: 4px 0 6px;
+    padding-left: 20px;
+}
+
+/* ---------- 多行截断（纯 CSS 兜底，防止 Jekyll 截断不干净） ---------- */
+.post-excerpt {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;       /* 最多 3 行，可按需调 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
