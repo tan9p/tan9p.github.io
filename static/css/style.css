@@ -4,7 +4,7 @@ html, body {
     padding: 0;
 }
 
-.main{
+#main{
 	display:flex;
 	align-items: flex-start;   /* 两栏顶部对齐 */
     	min-height: 100vh;
