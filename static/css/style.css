@@ -1,6 +1,5 @@
 /* ---------- 基础重置 ---------- */
 html, body {
-    display: block;
     margin: 0;
     padding: 0;
 }
@@ -36,6 +35,25 @@ body {
     min-width: 0;           /* 关键：防止内容把右侧撑破 */
     box-sizing: border-box;
     padding: 16px 24px;
+}
+
+#header {
+    /* 抵消 #container 的左右 padding */
+    margin-left:  -24px;
+    margin-right: -24px;
+    /* 抵消顶部 padding，让 header 贴在最上面（可选） */
+    margin-top:   -16px;
+    margin-bottom: 16px;
+
+    /* 关键：不要再写 width:100%，交给负 margin 自然撑开 */
+    width: auto;
+    max-width: none;
+
+    padding: 18px 28px;
+    background: #fff;
+    border-bottom: 1px solid #e6e9ef;
+    display: flex;
+    align-items: center;
 }
 
 /* 保证下拉和选项不超出侧栏宽度 */
@@ -328,7 +346,6 @@ body {
         .book-option { opacity: 1; }
     }
 #container,
-#header,
 #menu,
 #content {
     width: 100%;
@@ -337,4 +354,13 @@ body {
     box-sizing: border-box;
     margin-left: 0;
     margin-right: 0;
+}
+
+#right > ul {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
