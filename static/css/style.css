@@ -4,18 +4,18 @@ html, body {
     padding: 0;
 }
 
-#main{
-	display:flex;
-	align-items: flex-start;   /* 两栏顶部对齐 */
-    	min-height: 100vh;
-    	gap: 0;
-}
-
 /* ---------- 左右两栏布局 ---------- */
 body {
     display: flex;          /* 让两个顶级 div 并排 */
     align-items: stretch;   /* 两栏等高 */
     min-height: 100vh;      /* 至少铺满屏幕高度 */
+}
+
+#main{
+	display:flex;
+	align-items: flex-start;   /* 两栏顶部对齐 */
+    	min-height: 100vh;
+    	gap: 0;
 }
 
 /* 左侧边栏：占 1/5 */
@@ -37,24 +37,7 @@ body {
     padding: 16px 24px;
 }
 
-#header {
-    /* 抵消 #container 的左右 padding */
-    margin-left:  -24px;
-    margin-right: -24px;
-    /* 抵消顶部 padding，让 header 贴在最上面（可选） */
-    margin-top:   -16px;
-    margin-bottom: 16px;
 
-    /* 关键：不要再写 width:100%，交给负 margin 自然撑开 */
-    width: auto;
-    max-width: none;
-
-    padding: 18px 28px;
-    background: #fff;
-    border-bottom: 1px solid #e6e9ef;
-    display: flex;
-    align-items: center;
-}
 
 /* 保证下拉和选项不超出侧栏宽度 */
 .book-select,
@@ -126,39 +109,6 @@ body {
 
 #section > li > a:hover::after {
     transform: scaleX(1);
-}
-
-/* ================= 右侧链接组 ================= */
-#right {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin: 0;
-    padding: 0;
-}
-
-#right li {
-    list-style: none;
-}
-
-#right li a {
-    display: inline-block;
-    padding: 7px 14px;
-    font-size: 14px;
-    color: #4a5866;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: color .18s ease, background .18s ease, transform .18s ease;
-}
-
-#right li a:hover {
-    color: #2f7de1;
-    background: #f2f6fc;
-    transform: translateY(-1px);
-}
-
-#right li a:active {
-    transform: translateY(0);
 }
 
 /* ================= 小屏降级 ================= */
@@ -338,6 +288,41 @@ body {
         }
         .book-option { opacity: 1; }
     }
+    
+    
+    /* ================= 右侧链接组 ================= */
+#right {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+}
+
+#right li {
+    list-style: none;
+}
+
+#right li a {
+    display: inline-block;
+    padding: 7px 14px;
+    font-size: 14px;
+    color: #4a5866;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: color .18s ease, background .18s ease, transform .18s ease;
+}
+
+#right li a:hover {
+    color: #2f7de1;
+    background: #f2f6fc;
+    transform: translateY(-1px);
+}
+
+#right li a:active {
+    transform: translateY(0);
+}
+
 #container,
 #menu,
 #content {
