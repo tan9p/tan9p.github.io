@@ -45,10 +45,10 @@ body {
     box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     body { display: block; }
     #sec_nav { max-width: 100%; border-right: none; border-bottom: 1px solid #e6e9ef; }
-}
+}*/
 
 #header {
     display: flex;
@@ -325,3 +325,15 @@ body {
         }
         .book-option { opacity: 1; }
     }
+    
+    #container,
+#header,
+#menu,
+#content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+}
