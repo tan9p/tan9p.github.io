@@ -494,7 +494,7 @@ body {
 
 /* ---------- h1：最重，带底部蓝色下划线 ---------- */
 #sec h1 {
-    font-size: 26px;
+    font-size: 24px;
     color: #1a5fc0;
     padding-bottom: 10px;
     border-bottom: 2px solid #e6eefb;
@@ -599,3 +599,99 @@ body {
 /* 已访问保持同色，避免变紫 */
 #name:visited {
     color: #2f7de1;
+    
+/* ============================================================
+   #content 内的标题：整体降级、克制、有层级
+   特点：不用大字号、不用重色块，靠"字重 + 颜色深浅 + 细微装饰"分层
+   ============================================================ */
+
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+    margin: 1.4em 0 0.5em;
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    color: #1d2b3a;              /* 主体用深灰，只有 h1/h2 带点蓝 */
+}
+
+#content h1:first-child,
+#content h2:first-child,
+#content h3:first-child {
+    margin-top: 0;
+}
+
+/* ---------- h1：正文里最大，但也就 22px，不抢 postname ---------- */
+#content h1 {
+    font-size: 22px;
+    color: #1a5fc0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e6eefb;
+}
+
+/* ---------- h2：主蓝 + 左侧细竖条，最"有身份"的一级 ---------- */
+#content h2 {
+    font-size: 19px;
+    color: #2f7de1;
+    padding-left: 10px;
+    border-left: 3px solid #2f7de1;
+}
+
+/* ---------- h3：回到深灰，只比正文大一点 ---------- */
+#content h3 {
+    font-size: 17px;
+    color: #1d2b3a;
+    font-weight: 600;
+}
+
+/* ---------- h4：正文同级，靠字重区分 ---------- */
+#content h4 {
+    font-size: 15.5px;
+    color: #2b3a4a;
+    font-weight: 600;
+}
+
+/* ---------- h5：略小、变灰，弱化 ---------- */
+#content h5 {
+    font-size: 15px;
+    color: #4a5866;
+    font-weight: 600;
+}
+
+/* ---------- h6：最弱，小写灰色，靠字距和大写区分 ---------- */
+#content h6 {
+    font-size: 13px;
+    color: #8a97a6;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+/* ---------- 标题里的锚点链接：继承颜色，不变紫 ---------- */
+#content h1 a,
+#content h2 a,
+#content h3 a,
+#content h4 a,
+#content h5 a,
+#content h6 a {
+    color: inherit;
+    text-decoration: none;
+}
+#content h1 a:hover,
+#content h2 a:hover,
+#content h3 a:hover,
+#content h4 a:hover,
+#content h5 a:hover,
+#content h6 a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- 小屏微调 ---------- */
+@media (max-width: 640px) {
+    #content h1 { font-size: 20px; }
+    #content h2 { font-size: 17px; }
+    #content h3 { font-size: 16px; }
+}
