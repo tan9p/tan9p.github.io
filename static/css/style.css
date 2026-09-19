@@ -1,3 +1,50 @@
+/* ---------- 基础重置 ---------- */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- 左右两栏布局 ---------- */
+body {
+    display: flex;          /* 让两个顶级 div 并排 */
+    align-items: stretch;   /* 两栏等高 */
+    min-height: 100vh;      /* 至少铺满屏幕高度 */
+}
+
+/* 左侧边栏：占 1/5 */
+#sec_nav {
+    flex: 0 0 20%;          /* 固定 20%，不伸缩 */
+    max-width: 20%;
+    box-sizing: border-box; /* 让 padding 算在 20% 内 */
+    padding: 16px;
+    border-right: 1px solid #e6e9ef;
+    background: #fafbfd;
+    overflow-y: auto;       /* 内容多时侧栏自己滚动 */
+}
+
+/* 右侧内容：占剩下的 */
+#container {
+    flex: 1 1 auto;
+    min-width: 0;           /* 关键：防止内容把右侧撑破 */
+    box-sizing: border-box;
+    padding: 16px 24px;
+}
+
+/* 保证下拉和选项不超出侧栏宽度 */
+.book-select,
+.book-toggle,
+.book-dropdown {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    body { display: block; }
+    #sec_nav { max-width: 100%; border-right: none; border-bottom: 1px solid #e6e9ef; }
+}
+
+
+
 .book-select {
         position: relative;
         margin-bottom: 14px;
