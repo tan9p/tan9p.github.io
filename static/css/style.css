@@ -466,3 +466,113 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+/* ============================================================
+   #sec 内的标题层级：蓝色主题
+   思路：字号递减 + 颜色由深到浅 + 左侧竖条 + 字重递减
+   ============================================================ */
+
+#sec h1,
+#sec h2,
+#sec h3,
+#sec h4,
+#sec h5,
+#sec h6 {
+    margin: 1.6em 0 0.6em;
+    line-height: 1.35;
+    letter-spacing: 0.3px;
+    color: #1a5fc0;               /* 统一蓝色基调 */
+    font-weight: 700;
+}
+
+/* 首个标题不要顶部大边距 */
+#sec h1:first-child,
+#sec h2:first-child,
+#sec h3:first-child {
+    margin-top: 0;
+}
+
+/* ---------- h1：最重，带底部蓝色下划线 ---------- */
+#sec h1 {
+    font-size: 26px;
+    color: #1a5fc0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e6eefb;
+    position: relative;
+}
+#sec h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 64px;                  /* 短下划线，比整条更精致 */
+    height: 2px;
+    background: linear-gradient(90deg, #2f7de1, #6aa8f0);
+    border-radius: 2px;
+}
+
+/* ---------- h2：左侧蓝色竖条 ---------- */
+#sec h2 {
+    font-size: 22px;
+    color: #2f7de1;
+    padding-left: 12px;
+    border-left: 4px solid #2f7de1;
+    border-radius: 2px;
+}
+
+/* ---------- h3：颜色更浅，无装饰条 ---------- */
+#sec h3 {
+    font-size: 19px;
+    color: #3f8ae8;
+    font-weight: 600;
+}
+
+/* ---------- h4：正文级别，靠色和重区分 ---------- */
+#sec h4 {
+    font-size: 17px;
+    color: #4a90e2;
+    font-weight: 600;
+}
+
+/* ---------- h5：小标题，更淡 ---------- */
+#sec h5 {
+    font-size: 15px;
+    color: #6aa8f0;
+    font-weight: 600;
+}
+
+/* ---------- h6：最弱，用大写+字距做区分 ---------- */
+#sec h6 {
+    font-size: 14px;
+    color: #8ab8f2;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ---------- 锚点链接：h 里如果包了 <a>，继承颜色不变成默认蓝紫 ---------- */
+#sec h1 a,
+#sec h2 a,
+#sec h3 a,
+#sec h4 a,
+#sec h5 a,
+#sec h6 a {
+    color: inherit;
+    text-decoration: none;
+}
+#sec h1 a:hover,
+#sec h2 a:hover,
+#sec h3 a:hover,
+#sec h4 a:hover,
+#sec h5 a:hover,
+#sec h6 a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- 小屏微调 ---------- */
+@media (max-width: 640px) {
+    #sec h1 { font-size: 22px; }
+    #sec h2 { font-size: 19px; }
+    #sec h3 { font-size: 17px; }
+    #sec h4 { font-size: 16px; }
+}
