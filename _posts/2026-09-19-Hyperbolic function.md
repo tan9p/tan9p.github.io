@@ -26,7 +26,7 @@ categories: 初等数学
 |        | 双曲正弦函数                                                 | 双曲余弦函数                                                 | 双曲正切函数                                                 |
 | ------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 解析式 | $\sinh x=\frac{\mathrm{e}^x-\mathrm{e}^{-x}}{2}$             | $\cosh x=\frac{\mathrm{e}^x+\mathrm{e}^{-x}}{2}$             | $\tanh x=\frac{\mathrm{e}^{2x}-1}{\mathrm{e}^{2x}+1}$        |
-| 图象   | ![image-20260915152855769](https://raw.giteeusercontent.com/tan9p/picstorage/raw/master/2026-9-19/image-20260915152855769.png) | ![image-20260915152949550](https://raw.giteeusercontent.com/tan9p/picstorage/raw/master/2026-9-19/image-20260915152949550.png) | ![image-20260915153058734](https://raw.giteeusercontent.com/tan9p/picstorage/raw/master/2026-9-19/image-20260915153058734.png) |
+| 图象   | ![image-20260915152855769](https://raw.giteeusercontent.com/tan9p/picstorage/raw/master/2026-9-19/image-20260915152855769.png){: style="width: 300%; max-width: 30%;"} | ![image-20260915152949550](https://raw.giteeusercontent.com/tan9p/picstorage/raw/master/2026-9-19/image-20260915152949550.png){: style="width: 300%; max-width: 30%;"}| ![image-20260915153058734](https://raw.giteeusercontent.com/tan9p/picstorage/raw/master/2026-9-19/image-20260915153058734.png){: style="width: 300%; max-width: 30%;"} |
 | 值域   | $R$                                                          | $[1,+\infty)$                                                | $(-1,1)$                                                     |
 | 奇偶性 | 奇函数                                                       | 偶函数                                                       | 奇函数                                                       |
 | 单调性 | $R$上单增                                                    | $(-\infty,0]$上单减，$[0,+\infty)$上单增                     | $R$上单增                                                    |
@@ -34,6 +34,7 @@ categories: 初等数学
 
 
 ## 双曲函数的和、差、二倍角公式（与三角函数的对比）
+
 | 三角函数                                                  | 双曲函数                                                     |
 | --------------------------------------------------------- | ------------------------------------------------------------ |
 | $\sin^2 x+\cos^2 x=1$                                     | $\cosh^2 x-\sinh^2 x=1$                                      |
