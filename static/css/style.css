@@ -129,7 +129,7 @@ body {
 }
 
 /* ================= 右侧链接组 ================= */
-#bannerright {
+#right {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -137,11 +137,11 @@ body {
     padding: 0;
 }
 
-#bannerright li {
+#right li {
     list-style: none;
 }
 
-#bannerright li a {
+#right li a {
     display: inline-block;
     padding: 7px 14px;
     font-size: 14px;
@@ -151,13 +151,13 @@ body {
     transition: color .18s ease, background .18s ease, transform .18s ease;
 }
 
-#bannerright li a:hover {
+#right li a:hover {
     color: #2f7de1;
     background: #f2f6fc;
     transform: translateY(-1px);
 }
 
-#bannerright li a:active {
+#right li a:active {
     transform: translateY(0);
 }
 
@@ -349,7 +349,7 @@ body {
     margin-right: 0;
 }
 
-#bannerright > ul {
+#right > ul {
     display: flex;
     align-items: center;
     gap: 6px;
