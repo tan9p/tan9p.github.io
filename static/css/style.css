@@ -69,13 +69,6 @@ body {
     #sec_nav { max-width: 100%; border-right: none; border-bottom: 1px solid #e6e9ef; }
 }*/
 
-#header {
-    display: flex;
-    align-items: center;
-    padding: 18px 28px;
-    background: #fff;
-    border-bottom: 1px solid #e6e9ef;
-}
 
 /* #title 本身是 span，让它撑满剩余宽度并变成 flex 容器 */
 #title {
@@ -136,7 +129,7 @@ body {
 }
 
 /* ================= 右侧链接组 ================= */
-#right {
+#bannerright {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -144,11 +137,11 @@ body {
     padding: 0;
 }
 
-#right li {
+#bannerright li {
     list-style: none;
 }
 
-#right li a {
+#bannerright li a {
     display: inline-block;
     padding: 7px 14px;
     font-size: 14px;
@@ -158,13 +151,13 @@ body {
     transition: color .18s ease, background .18s ease, transform .18s ease;
 }
 
-#right li a:hover {
+#bannerright li a:hover {
     color: #2f7de1;
     background: #f2f6fc;
     transform: translateY(-1px);
 }
 
-#right li a:active {
+#bannerright li a:active {
     transform: translateY(0);
 }
 
